@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Interests from './interests';
 import Extracurriculars from './extracurriculars';
 
 import Layout from '../components/Layout';
@@ -8,6 +7,7 @@ import About from '../components/about';
 import Education from '../components/education';
 import Experience from '../components/experience';
 import Skills from '../components/skills';
+import Interests from '../components/interests';
 
 import Sidebar from '../components/Sidebar';
 import config from '../../config';
