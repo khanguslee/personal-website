@@ -1,9 +1,8 @@
 import React from 'react';
 
 function About(props) {
-    console.log(props);
     const { config } = props;
-    console.log(config)
+
     const renderSocialLink = (config) => {
         return config.socialLinks.map(social => {
             const { icon, url } = social;
