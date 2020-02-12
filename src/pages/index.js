@@ -1,13 +1,13 @@
 import React from 'react';
 
-import About from './about';
 import Experience from './experience';
-import Education from './education';
 import Skills from './skills';
 import Interests from './interests';
 import Extracurriculars from './extracurriculars';
 
 import Layout from '../components/Layout';
+import About from '../components/about';
+import Education from '../components/education';
 
 import Sidebar from '../components/Sidebar';
 import config from '../../config';

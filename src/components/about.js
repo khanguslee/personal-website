@@ -1,8 +1,9 @@
 import React from 'react';
 
 function About(props) {
+    console.log(props);
     const { config } = props;
-
+    console.log(config)
     const renderSocialLink = (config) => {
         return config.socialLinks.map(social => {
             const { icon, url } = social;
@@ -14,6 +15,8 @@ function About(props) {
         })
     }
 
+    const { firstName } = config;
+
     return (
         <section
             className="resume-section p-3 p-lg-5 d-flex align-items-center"
@@ -21,7 +24,7 @@ function About(props) {
         >
             <div className="w-100">
                 <h1 className="mb-0">
-                    {config.firstName}
+                    {firstName}
                     <span className="text-primary">{config.lastName}</span>
                 </h1>
                 <div className="subheading mb-5">
