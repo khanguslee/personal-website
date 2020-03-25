@@ -1,12 +1,14 @@
 module.exports = {
   siteTitle: 'khanguslee', // <title>
-  manifestName: 'Resume',
-  manifestShortName: 'Landing', // max 12 characters
-  manifestStartUrl: '/',
-  manifestBackgroundColor: '#663399',
-  manifestThemeColor: '#663399',
-  manifestDisplay: 'standalone',
-  manifestIcon: 'src/assets/img/website-icon.png',
+  manifest: {
+    name: 'Resume',
+    shortName: 'Landing', // Max 12 characters
+    startUrl: '/',
+    backgroundColor: '#663399',
+    themeColor: '#663399',
+    display: 'standalone',
+    icon: 'src/assets/img/website-icon.png',
+  },
   pathPrefix: `/gatsby-starter-resume/`, // This path is subpath of your hosting https://domain/portfolio
   firstName: 'Angus',
   lastName: 'Lee',
