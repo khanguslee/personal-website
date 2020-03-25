@@ -4,6 +4,28 @@
 
 My own portfolio website created with Gatsby and hosted with Netlify.
 
+## Getting started
+
+### Development
+
+```bash
+  yarn install
+  gatsby develop
+```
+
+A local deployment should be hosted on <http://localhost:8000/>
+
+### Production Build
+
+```bash
+  gatsby build
+  gatsby serve
+```
+
+### Deploying
+
+This repository has been set up to automatically deploy any changes to the `master` branch.
+
 ## Credits
 
-Gatsby Starter Link: https://www.gatsbyjs.org/starters/anubhavsrivastava/gatsby-starter-resume/
+Gatsby Starter Link: <https://www.gatsbyjs.org/starters/anubhavsrivastava/gatsby-starter-resume/>
