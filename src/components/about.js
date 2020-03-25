@@ -19,6 +19,7 @@ function About(props) {
     return (
         <section
             className="resume-section p-3 p-lg-5 d-flex align-items-center"
+            data-testid="about-section"
             id="about"
         >
             <div className="w-100">
