@@ -43,5 +43,21 @@ module.exports = {
       description:
         'Developed a progressive web application for Census Field Officers using typescript and react. Liasing with business clients to fulfil their needs about the product',
     },
+    {
+      company: 'MongoDB',
+      role: 'Software Engineer Intern',
+      startDate: 'December 2018',
+      endDate: 'March 2019',
+      description:
+        'Part of the Technical Services MongoDB Team. Worked on a POC intern project that allows collaborative log viewing between Technical Support staff',
+    },
+    {
+      company: 'Autodesk',
+      role: 'Software Engineer Intern',
+      startDate: 'July 2017',
+      endDate: 'January 2018',
+      description:
+        'Converted a Windows-only C# application into a program that builds and runs on Linux using Mono C#',
+    },
   ],
 };
