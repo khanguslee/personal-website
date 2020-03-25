@@ -26,4 +26,22 @@ module.exports = {
     },
   ],
   email: 'khanguslee@gmail.com',
+  experience: [
+    {
+      company: 'MongoDB',
+      role: 'Software Engineer Intern',
+      startDate: 'December 2019',
+      endDate: 'February 2019',
+      description:
+        'Part of the MongoDB Charts Team working on incorporating interactive Charts into MongoDB Charts',
+    },
+    {
+      company: 'Australian Bureau of Statistics',
+      role: 'Software Engineer Intern',
+      startDate: 'June 2019',
+      endDate: 'December 2019',
+      description:
+        'Developed a progressive web application for Census Field Officers using typescript and react. Liasing with business clients to fulfil their needs about the product',
+    },
+  ],
 };

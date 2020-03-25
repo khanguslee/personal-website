@@ -7,7 +7,10 @@ describe('Experience component', () => {
   const experienceTestID = 'experience-section';
 
   it('displays correct header', () => {
-    const { getByTestId } = render(<Experience />);
+    const testExperiences = [];
+    const { getByTestId } = render(
+      <Experience experiences={testExperiences} />
+    );
 
     const expectedHeaderText = 'Experience';
 

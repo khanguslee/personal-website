@@ -16,12 +16,11 @@ const IndexPage = () => (
   <Layout>
     <Sidebar />
     <div className="container-fluid p-0">
-
       <About config={config} />
 
       <hr className="m-0" />
 
-      <Experience />
+      <Experience experiences={config.experience} />
 
       <hr className="m-0" />
 
@@ -38,7 +37,6 @@ const IndexPage = () => (
       <hr className="m-0" />
 
       <Interests />
-
     </div>
   </Layout>
 );
