@@ -4,8 +4,10 @@ function Experience(props) {
   const { experiences } = props;
 
   const renderJobExperiences = experiences => {
+    // TODO: Sort the experiences array before rendering.
     return experiences.map(job => {
       const { company, role, startDate, endDate, description } = job;
+      // TODO: Add image of company beside each entry
       return (
         <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div className="resume-content">
