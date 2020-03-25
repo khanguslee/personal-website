@@ -13,11 +13,11 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: manifest.name,
-        short_name: manifes.shortName,
+        short_name: manifest.shortName,
         start_url: config.pathPrefix || manifest.startUrl,
         background_color: manifest.backgroundColor,
         theme_color: manifest.themeColor,
-        display: manifes.display,
+        display: manifest.display,
         icon: manifest.icon, // This path is relative to the root of the site.
       },
     },
