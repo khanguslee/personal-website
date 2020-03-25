@@ -1,8 +1,8 @@
 module.exports = {
   siteTitle: 'khanguslee', // <title>
   manifest: {
-    name: 'Resume',
-    shortName: 'Landing', // Max 12 characters
+    name: 'khanguslee Portfolio Website',
+    shortName: 'khanguslee', // Max 12 characters
     startUrl: '/',
     backgroundColor: '#663399',
     themeColor: '#663399',
