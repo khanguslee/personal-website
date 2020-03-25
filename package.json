@@ -32,11 +32,18 @@
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/react": "^10.0.1",
+    "babel-jest": "^25.1.0",
+    "babel-preset-gatsby": "^0.3.1",
     "gh-pages": "^2.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
     "prettier": "^1.17.0",
+    "react-test-renderer": "^16.13.1",
     "rimraf": "^2.6.3"
   },
   "keywords": [
