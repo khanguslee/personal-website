@@ -1,5 +1,5 @@
-import React from "react"
-import { render } from "@testing-library/react"
+import React from 'react';
+import { render } from '@testing-library/react';
 
 import About from '../about';
 
@@ -14,13 +14,17 @@ const testConfig = {
       url: 'https://github.com/khanguslee',
     },
   ],
-}
+};
 
 describe('About component', () => {
-  it('displays config properly', () => {
-    const { getByTestId } = render(<About config={testConfig} />)
+  const aboutTestID = 'about-section';
+
+  it('displays config values properly', () => {
+    const { getByTestId } = render(<About config={testConfig} />);
 
     const expectedDisplayedName = testConfig.firstName + testConfig.lastName;
-    expect(getByTestId("about-section")).toHaveTextContent(expectedDisplayedName);
-  })
-})
+
+    expect(getByTestId(aboutTestID)).toHaveTextContent(expectedDisplayedName);
+    expect(getByTestId(aboutTestID)).toHaveTextContent(testConfig.email);
+  });
+});
