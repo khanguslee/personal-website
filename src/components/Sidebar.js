@@ -20,11 +20,18 @@ export class Sidebar extends Component {
       isCollapsed: true,
     };
     this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.closeNavbar = this.closeNavbar.bind(this);
   }
 
   toggleNavbar() {
     this.setState({
       isCollapsed: !this.state.isCollapsed,
+    });
+  }
+
+  closeNavbar() {
+    this.setState({
+      isCollapsed: true,
     });
   }
 
@@ -70,6 +77,7 @@ export class Sidebar extends Component {
             currentClassName="active"
             offset={-300}
             className="navbar-nav"
+            onUpdate={this.closeNavbar}
           >
             {tabs.map(tab => {
               const { href, content } = tab;
