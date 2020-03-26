@@ -15,7 +15,7 @@ function About(props) {
     });
   };
 
-  const { firstName, lastName, email, socialLinks } = config;
+  const { firstName, lastName, email, socialLinks, subtitle } = config;
 
   return (
     <section
@@ -50,10 +50,7 @@ function About(props) {
         </div>
 
         <div className="mx-lg-0 mx-2">
-          <p className="lead mb-5">
-            I am a Software Engineer with a passion for solving real-world
-            problems that impact people's lives through programming.
-          </p>
+          <p className="lead mb-5">{subtitle}</p>
           <div className="social-icons">{renderSocialLink(socialLinks)}</div>
         </div>
       </div>
