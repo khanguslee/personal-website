@@ -48,11 +48,14 @@ function About(props) {
             </div>
           </div>
         </div>
-        <p className="lead mb-5">
-          I am a Software Engineer with a passion for solving real-world
-          problems that impact people's lives through programming.
-        </p>
-        <div className="social-icons">{renderSocialLink(socialLinks)}</div>
+
+        <div className="mx-lg-0 mx-2">
+          <p className="lead mb-5">
+            I am a Software Engineer with a passion for solving real-world
+            problems that impact people's lives through programming.
+          </p>
+          <div className="social-icons">{renderSocialLink(socialLinks)}</div>
+        </div>
       </div>
     </section>
   );
