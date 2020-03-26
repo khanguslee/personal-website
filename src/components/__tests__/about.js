@@ -7,6 +7,7 @@ const testConfig = {
   firstName: 'foo',
   lastName: 'bar',
   email: 'test@test.com',
+  subtitle: 'Please hire me.',
   socialLinks: [
     {
       icon: 'fa-github',
@@ -26,5 +27,6 @@ describe('About component', () => {
 
     expect(getByTestId(aboutTestID)).toHaveTextContent(expectedDisplayedName);
     expect(getByTestId(aboutTestID)).toHaveTextContent(testConfig.email);
+    expect(getByTestId(aboutTestID)).toHaveTextContent(testConfig.subtitle);
   });
 });
