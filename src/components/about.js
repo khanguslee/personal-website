@@ -1,4 +1,5 @@
 import React from 'react';
+import avatar from '../assets/images/avatar.png';
 
 function About(props) {
   const { config } = props;
@@ -14,7 +15,7 @@ function About(props) {
     });
   };
 
-  const { firstName, lastName, email, socialLinks } = config;
+  const { firstName, lastName, email, socialLinks, subtitle } = config;
 
   return (
     <section
@@ -23,18 +24,35 @@ function About(props) {
       id="about"
     >
       <div className="w-100">
-        <h1 className="mb-0">
-          {firstName}
-          <span className="text-primary">{lastName}</span>
-        </h1>
-        <div className="subheading mb-5">
-          <a href={`mailto:${email}`}>{email}</a>
+        <div className="row mb-5">
+          <div className="col-md-4 col-sm-5 mb-sm-0 mb-2">
+            <div className="text-center">
+              <span className="d-lg-none">
+                <img
+                  className="img-profile rounded-circle"
+                  src={avatar}
+                  alt=""
+                />
+              </span>
+            </div>
+          </div>
+          <div className="col col-lg-12 my-auto">
+            <div className="text-center">
+              <h1 className="mb-0">
+                {firstName}
+                <span className="text-primary">{lastName}</span>
+              </h1>
+              <div className="subheading">
+                <a href={`mailto:${email}`}>{email}</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <p className="lead mb-5">
-          I am a Software Engineer with a passion for solving real-world
-          problems that impact people's lives through programming.
-        </p>
-        <div className="social-icons">{renderSocialLink(socialLinks)}</div>
+
+        <div className="mx-lg-0 mx-2">
+          <p className="lead mb-5">{subtitle}</p>
+          <div className="social-icons">{renderSocialLink(socialLinks)}</div>
+        </div>
       </div>
     </section>
   );
