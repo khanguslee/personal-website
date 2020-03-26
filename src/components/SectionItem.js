@@ -34,7 +34,7 @@ function SectionItem(props) {
       <div className="resume-content" data-testid="section-content">
         <h3 className="mb-0">{title}</h3>
         <div className="subheading mb-1">{subtitle}</div>
-        {description && <p>{description}</p>}
+        {description && <p className="mb-0">{description}</p>}
         {descriptionList && renderDescriptionList(descriptionList)}
       </div>
       <div
