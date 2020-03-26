@@ -17,11 +17,20 @@ export class Sidebar extends Component {
         { content: 'Skills', href: 'skills' },
         { content: 'Interests', href: 'interests' },
       ],
+      isCollapsed: true,
     };
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+  }
+
+  toggleNavbar() {
+    this.setState({
+      isCollapsed: !this.state.isCollapsed,
+    });
   }
 
   render() {
-    const { tabs } = this.state;
+    const { tabs, isCollapsed } = this.state;
+
     return (
       <nav
         className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
@@ -40,24 +49,29 @@ export class Sidebar extends Component {
           </span>
         </a>
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler navbar-toggler-right ${
+            isCollapsed ? 'collapsed' : ''
+          }`}
           type="button"
           data-toggle="collapse"
-          data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={this.toggleNavbar}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'}`}
+          id="navbarSupportedContent"
+        >
           <Scrollspy
-            items={tabs.map(s => s.href)}
+            items={tabs.map(tab => tab.href)}
             currentClassName="active"
             offset={-300}
             className="navbar-nav"
           >
-            {tabs.map((tab, i) => {
+            {tabs.map(tab => {
               const { href, content } = tab;
               return (
                 <li className="nav-item" key={href}>
