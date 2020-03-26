@@ -40,7 +40,7 @@ describe('Experience component', () => {
 
     expect(getByText(testCompanyExperience.company)).toHaveClass('subheading');
 
-    const experienceDate = getByTestId('experience-date');
+    const experienceDate = getByTestId('experience-content');
     const expectedDateText = `${testCompanyExperience.startDate} - ${testCompanyExperience.endDate}`;
     expect(experienceDate).toHaveTextContent(expectedDateText);
   });
