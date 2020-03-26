@@ -53,4 +53,28 @@ describe('SectionItem component', () => {
       testSectionConfig.description
     );
   });
+
+  it('displays description list', () => {
+    const testSectionConfig = {
+      title: 'Test Title',
+      subtitle: 'Test Subtitle',
+      rightTitle: 'Test Right Title',
+      descriptionList: ['Test Item 1', 'Test Item 2', 'Test Item 3'],
+    };
+    const sectionTestId = 'test-section-id';
+    const { getByTestId } = render(
+      <SectionItem
+        id={0}
+        title={testSectionConfig.title}
+        subtitle={testSectionConfig.subtitle}
+        descriptionList={testSectionConfig.descriptionList}
+        rightTitle={testSectionConfig.rightTitle}
+        testId={sectionTestId}
+      />
+    );
+
+    testSectionConfig.descriptionList.map(item => {
+      expect(getByTestId(sectionTestId)).toHaveTextContent(item);
+    });
+  });
 });
