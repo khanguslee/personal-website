@@ -34,32 +34,47 @@ module.exports = {
       role: 'Software Engineer Intern',
       startDate: 'December 2019',
       endDate: 'February 2019',
-      description:
-        'Part of the MongoDB Charts Team working on incorporating interactive Charts into MongoDB Charts',
+      description: 'Part of the MongoDB Charts Team.',
+      tasks: [
+        'Fix various bugs on their React application that will released into production',
+        'Work with another intern to create interactive chart features',
+      ],
     },
     {
       company: 'Australian Bureau of Statistics',
       role: 'Software Engineer Intern',
       startDate: 'June 2019',
       endDate: 'December 2019',
-      description:
-        'Developed a progressive web application for Census Field Officers using typescript and react. Liasing with business clients to fulfil their needs about the product',
+      description: 'Technology Services Division, Census Section.',
+      tasks: [
+        'Develop a Progressive Web App written with React, Typescript and Redux',
+        'Liase with the business team about the design and functionality of the application',
+        "Use an 'offline-first' strategy",
+      ],
     },
     {
       company: 'MongoDB',
       role: 'Software Engineer Intern',
       startDate: 'December 2018',
       endDate: 'March 2019',
-      description:
-        'Part of the Technical Services MongoDB Team. Worked on a POC intern project that allows collaborative log viewing between Technical Support staff',
+      description: 'Part of the Technical Services Team.',
+      tasks: [
+        'Convert desktop application into a web application',
+        'Render various elements of web application using d3.js library',
+        'Incorporate collaborative features into the web application',
+      ],
     },
     {
       company: 'Autodesk',
       role: 'Software Engineer Intern',
       startDate: 'July 2017',
       endDate: 'January 2018',
-      description:
-        'Converted a Windows-only C# application into a program that builds and runs on Linux using Mono C#',
+      tasks: [
+        'Develop Python scripts for smoke and load tests for the automated testing framework',
+        'Develop a command line application that parses a log in C++',
+        'Use node.JS and React to create a web application for the C++ Log Parser application',
+        'Convert a Windows-only C# application into a program that builds and runs on Linux using Mono C#',
+      ],
     },
   ],
   education: [
