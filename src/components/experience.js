@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SectionItem from './SectionItem';
+
 function Experience(props) {
   const { experiences } = props;
 
@@ -7,26 +9,17 @@ function Experience(props) {
     // TODO: Sort the experiences array before rendering.
     return experiences.map((job, index) => {
       const { company, role, startDate, endDate, description } = job;
-      // TODO: Add image of company beside each entry
+
+      const rightTitleText = `${startDate} - ${endDate}`;
+
       return (
-        <div
-          className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
+        <SectionItem
+          title={role}
+          subtitle={company}
           key={index}
-        >
-          <div className="resume-content" data-testid="experience-content">
-            <h3 className="mb-0">{role}</h3>
-            <div className="subheading mb-3">{company}</div>
-            <p>{description}</p>
-          </div>
-          <div
-            className="resume-date text-md-right"
-            data-testid="experience-date"
-          >
-            <span className="text-primary">
-              {startDate} - {endDate}
-            </span>
-          </div>
-        </div>
+          description={description}
+          rightTitle={rightTitleText}
+        />
       );
     });
   };
