@@ -8,7 +8,7 @@ function Experience(props) {
   const renderJobExperiences = experiences => {
     // TODO: Sort the experiences array before rendering.
     return experiences.map((job, index) => {
-      const { company, role, startDate, endDate, description } = job;
+      const { company, role, startDate, endDate, description, tasks } = job;
 
       const rightTitleText = `${startDate} - ${endDate}`;
 
@@ -18,6 +18,7 @@ function Experience(props) {
           title={role}
           subtitle={company}
           description={description}
+          descriptionList={tasks}
           rightTitle={rightTitleText}
           testId={'experience-content'}
         />
