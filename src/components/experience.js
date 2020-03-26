@@ -14,11 +14,12 @@ function Experience(props) {
 
       return (
         <SectionItem
+          key={index}
           title={role}
           subtitle={company}
-          key={index}
           description={description}
           rightTitle={rightTitleText}
+          testId={'experience-content'}
         />
       );
     });
