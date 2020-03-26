@@ -62,4 +62,16 @@ module.exports = {
         'Converted a Windows-only C# application into a program that builds and runs on Linux using Mono C#',
     },
   ],
+  education: [
+    {
+      school: 'Monash University',
+      degree: 'Bachelor of Science / Bachelor of Engineering (Honours)',
+      startDate: 'February 2015',
+      endDate: 'June 2020',
+      field: [
+        'Computational Science (Extended major)',
+        'Electrical and Computer Systems Engineering specialisation',
+      ],
+    },
+  ],
 };
