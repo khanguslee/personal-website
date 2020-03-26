@@ -22,9 +22,11 @@ const IndexPage = () => (
 
       <Experience experiences={config.experience} />
 
-      <hr className="m-0" />
-
-      <Education />
+      {config.education && (
+        <>
+          <hr className="m-0" /> <Education education={config.education} />
+        </>
+      )}
 
       <hr className="m-0" />
 

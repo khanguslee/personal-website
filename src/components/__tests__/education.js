@@ -7,7 +7,7 @@ describe('Education component', () => {
   const educationTestID = 'education-section';
 
   it('displays correct header', () => {
-    const { getByTestId } = render(<Education />);
+    const { getByTestId } = render(<Education education={[]} />);
 
     const expectedHeaderText = 'Education';
 
