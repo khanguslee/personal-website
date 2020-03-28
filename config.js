@@ -91,6 +91,7 @@ module.exports = {
         'Computational Science (Extended major)',
         'Electrical and Computer Systems Engineering specialisation',
       ],
+      imageName: 'monash-logo',
     },
   ],
 };
