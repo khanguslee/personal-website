@@ -1,3 +1,4 @@
+const path = require('path');
 const config = require('./config');
 
 const { manifest } = config;
@@ -8,6 +9,15 @@ module.exports = {
     title: config.siteTitle,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `svg`,
+        path: path.join(__dirname, 'src', 'assets', 'svg'),
+      },
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
