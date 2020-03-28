@@ -8,6 +8,7 @@ function SectionItem(props) {
     description,
     descriptionList,
     rightTitle,
+    imageRenderer,
     testId,
   } = props;
 
@@ -26,22 +27,28 @@ function SectionItem(props) {
   };
 
   return (
-    <div
-      className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5"
-      data-testid={testId}
-      key={id}
-    >
+    <div className="resume-item d-flex mb-5" data-testid={testId} key={id}>
+      {imageRenderer && (
+        <div className="resume-image d-none d-sm-block mr-4 pt-2">
+          {imageRenderer}
+        </div>
+      )}
       <div className="resume-content" data-testid="section-content">
-        <h3 className="mb-0">{title}</h3>
-        <div className="subheading mb-1">{subtitle}</div>
+        <div className="d-flex justify-content-between">
+          <h3 className="mb-0">{title}</h3>
+          <div
+            className="resume-date text-right"
+            data-testid="section-right-title"
+          >
+            <span className="text-primary">{rightTitle}</span>
+          </div>
+        </div>
+
+        <div className="d-flex">
+          <div className="subheading mb-1">{subtitle}</div>
+        </div>
         {description && <p className="mb-0">{description}</p>}
         {descriptionList && renderDescriptionList(descriptionList)}
-      </div>
-      <div
-        className="resume-date text-md-right"
-        data-testid="section-right-title"
-      >
-        <span className="text-primary">{rightTitle}</span>
       </div>
     </div>
   );

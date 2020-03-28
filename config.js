@@ -39,6 +39,7 @@ module.exports = {
         'Fix various bugs on their React application that will released into production',
         'Work with another intern to create interactive chart features',
       ],
+      imageName: 'mongodb-logo',
     },
     {
       company: 'Australian Bureau of Statistics',
@@ -51,6 +52,7 @@ module.exports = {
         'Liase with the business team about the design and functionality of the application',
         "Use an 'offline-first' strategy",
       ],
+      imageName: 'abs-logo',
     },
     {
       company: 'MongoDB',
@@ -63,6 +65,7 @@ module.exports = {
         'Render various elements of web application using d3.js library',
         'Incorporate collaborative features into the web application',
       ],
+      imageName: 'mongodb-logo',
     },
     {
       company: 'Autodesk',
@@ -75,6 +78,7 @@ module.exports = {
         'Use node.JS and React to create a web application for the C++ Log Parser application',
         'Convert a Windows-only C# application into a program that builds and runs on Linux using Mono C#',
       ],
+      imageName: 'autodesk-logo',
     },
   ],
   education: [
@@ -87,6 +91,7 @@ module.exports = {
         'Computational Science (Extended major)',
         'Electrical and Computer Systems Engineering specialisation',
       ],
+      imageName: 'monash-logo',
     },
   ],
 };

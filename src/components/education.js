@@ -1,15 +1,34 @@
 import React from 'react';
 
+import useLogoImages from '../hooks/useLogoImages';
+
 import SectionItem from './SectionItem';
 
 function Education(props) {
   const { education } = props;
+  const logoImages = useLogoImages();
 
   const renderEducation = educations => {
     return educations.map((education, index) => {
-      const { school, degree, startDate, endDate, field } = education;
+      const {
+        school,
+        degree,
+        startDate,
+        endDate,
+        field,
+        imageName,
+      } = education;
 
       const rightTitleText = `${startDate} - ${endDate}`;
+
+      const ImageComponent = logoImages.hasOwnProperty(imageName) ? (
+        <img
+          src={logoImages[imageName].publicURL}
+          alt={logoImages[imageName].name}
+        />
+      ) : (
+        undefined
+      );
 
       return (
         <SectionItem
@@ -18,6 +37,7 @@ function Education(props) {
           subtitle={degree}
           descriptionList={field}
           rightTitle={rightTitleText}
+          imageRenderer={ImageComponent}
         />
       );
     });
@@ -31,7 +51,7 @@ function Education(props) {
     >
       <div className="w-100">
         <h2 className="mb-5">Education</h2>
-        {renderEducation(education)}
+        {renderEducation(education, logoImages)}
       </div>
     </section>
   );

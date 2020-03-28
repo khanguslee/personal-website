@@ -1,16 +1,36 @@
 import React from 'react';
 
+import useLogoImages from '../hooks/useLogoImages';
+
 import SectionItem from './SectionItem';
 
 function Experience(props) {
   const { experiences } = props;
+  const logoImages = useLogoImages();
 
-  const renderJobExperiences = experiences => {
+  const renderJobExperiences = (experiences, logoImages) => {
     // TODO: Sort the experiences array before rendering.
     return experiences.map((job, index) => {
-      const { company, role, startDate, endDate, description, tasks } = job;
+      const {
+        company,
+        role,
+        startDate,
+        endDate,
+        description,
+        tasks,
+        imageName,
+      } = job;
 
       const rightTitleText = `${startDate} - ${endDate}`;
+
+      const ImageComponent = logoImages.hasOwnProperty(imageName) ? (
+        <img
+          src={logoImages[imageName].publicURL}
+          alt={logoImages[imageName].name}
+        />
+      ) : (
+        undefined
+      );
 
       return (
         <SectionItem
@@ -20,6 +40,7 @@ function Experience(props) {
           description={description}
           descriptionList={tasks}
           rightTitle={rightTitleText}
+          imageRenderer={ImageComponent}
           testId={'experience-content'}
         />
       );
@@ -34,7 +55,7 @@ function Experience(props) {
     >
       <div className="w-100">
         <h2 className="mb-5">Experience</h2>
-        {renderJobExperiences(experiences)}
+        {renderJobExperiences(experiences, logoImages)}
       </div>
     </section>
   );
