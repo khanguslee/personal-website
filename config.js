@@ -94,4 +94,40 @@ module.exports = {
       imageName: 'monash-logo',
     },
   ],
+  extracurriculars: {
+    studentClubs: [
+      {
+        name: 'Monash Human Power',
+        title: 'Electrical Team Lead',
+        date: {
+          start: 2018,
+          end: 2020,
+        },
+      },
+      {
+        name: 'Monash Association of Coding',
+        title: 'Technology Director',
+        date: {
+          start: 2019,
+          end: 2020,
+        },
+      },
+      {
+        name: 'Society of Monash Electrical Engineers',
+        title: 'Careers and Sponsorship Representative',
+        date: {
+          start: 2019,
+          end: 2020,
+        },
+      },
+      {
+        name: 'Society of Monash Electrical Engineers',
+        title: '3rd Year Representative',
+        date: {
+          start: 2019,
+          end: 2019,
+        },
+      },
+    ],
+  },
 };
