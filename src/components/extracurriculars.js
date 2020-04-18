@@ -1,24 +1,28 @@
 import React from 'react';
 
-function Extracurriculars() {
-  const renderStudentClubs = () => {
+function Extracurriculars(props) {
+  const { studentClubs } = props;
+
+  const renderStudentClubs = clubs => {
+    const clubList = clubs.map(club => {
+      return (
+        <div>
+          <div className="d-flex justify-content-between">
+            <h4 className="mb-0">{club.name}</h4>
+            <div className="text-right">
+              <span className="text-primary">
+                {club.date.start + ' - ' + club.date.end}
+              </span>
+            </div>
+          </div>
+          <p>{club.title}</p>
+        </div>
+      );
+    });
     return (
       <>
         <h3>Student Clubs</h3>
-        <ul className="fa-ul mb-0">
-          <li>Monash Human Power (MHP) 2018-2020 - Electrical Team Lead</li>
-          <li>
-            Monash Association of Coding (MAC) 2019/20 - Technology Director
-          </li>
-          <li>
-            Society of Monash Electrical Engineers (SMEE) 2019 - Careers and
-            Sponsorship Representative
-          </li>
-          <li>
-            Society of Monash Electrical Engineers (SMEE) 2018 - 3<sup>rd</sup>{' '}
-            Year Representative
-          </li>
-        </ul>
+        {clubList}
       </>
     );
   };
@@ -47,7 +51,7 @@ function Extracurriculars() {
     >
       <div className="w-100">
         <h2 className="mb-5">Extracurriculars</h2>
-        {renderStudentClubs()}
+        {renderStudentClubs(studentClubs)}
         <br></br>
         {renderHackathons()}
       </div>
