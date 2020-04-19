@@ -129,5 +129,22 @@ module.exports = {
         },
       },
     ],
+    hackathons: [
+      {
+        name: 'Hackamon 2019',
+        project: 'perspective',
+        description: '2nd Place',
+      },
+      {
+        name: 'Unihack 2019',
+        project: 'meta',
+        description: '',
+      },
+      {
+        name: 'Hard Hackathon 2018',
+        project: 'Guarden',
+        description: '',
+      },
+    ],
   },
 };
