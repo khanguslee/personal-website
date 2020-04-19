@@ -7,7 +7,11 @@ describe('Extracurriculars component', () => {
   const extracurricularsTestID = 'extracurriculars-section';
 
   it('displays correct header', () => {
-    const { getByTestId } = render(<Extracurriculars />);
+    const studentClubs = [];
+    const hackathons = [];
+    const { getByTestId } = render(
+      <Extracurriculars studentClubs={studentClubs} hackathons={hackathons} />
+    );
 
     const expectedHeaderText = 'Extracurriculars';
 
