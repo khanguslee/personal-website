@@ -139,7 +139,8 @@ module.exports = {
             link: 'https://github.com/khanguslee/perspective',
           },
         ],
-        description: '2nd Place',
+        description:
+          'Awarded 2nd Place at the Hackathon. Using the idea that the best way of learning is through teaching. This platform allows students to teach different topics of a unit via video format whilst receiving feedback from other students and tutors.',
       },
       {
         name: 'Unihack 2019',
@@ -150,7 +151,8 @@ module.exports = {
             link: 'https://github.com/khanguslee/meta',
           },
         ],
-        description: '',
+        description:
+          'Web application that puts online news meta-data back in the hands of the user. I helped create a working authentication and registration system using passport.js, mongoose and MongoDB.',
       },
       {
         name: 'Hard Hackathon 2018',
@@ -160,8 +162,10 @@ module.exports = {
             name: 'github',
             link: 'https://github.com/khanguslee/Guarden',
           },
+          { name: 'webpage', link: 'http://guarden.herokuapp.com/' },
         ],
-        description: '',
+        description:
+          'An all-in-one plant management system. Created a dashboard that would grab sensor data from MongoDB which were sent from Arduinos and Raspberry Pis. The dashboard could also control a servo that would spray plants.',
       },
     ],
   },
