@@ -94,4 +94,79 @@ module.exports = {
       imageName: 'monash-logo',
     },
   ],
+  extracurriculars: {
+    studentClubs: [
+      {
+        name: 'Monash Human Power',
+        title: 'Electrical Team Lead',
+        date: {
+          start: 2018,
+          end: 2020,
+        },
+      },
+      {
+        name: 'Monash Association of Coding',
+        title: 'Technology Director',
+        date: {
+          start: 2019,
+          end: 2020,
+        },
+      },
+      {
+        name: 'Society of Monash Electrical Engineers',
+        title: 'Careers and Sponsorship Representative',
+        date: {
+          start: 2019,
+          end: 2020,
+        },
+      },
+      {
+        name: 'Society of Monash Electrical Engineers',
+        title: '3rd Year Representative',
+        date: {
+          start: 2019,
+          end: 2019,
+        },
+      },
+    ],
+    hackathons: [
+      {
+        name: 'Hackamon 2019',
+        project: 'perspective',
+        projectLinks: [
+          {
+            name: 'github',
+            link: 'https://github.com/khanguslee/perspective',
+          },
+        ],
+        description:
+          'Awarded 2nd Place at the Hackathon. Using the idea that the best way of learning is through teaching. This platform allows students to teach different topics of a unit via video format whilst receiving feedback from other students and tutors.',
+      },
+      {
+        name: 'Unihack 2019',
+        project: 'meta',
+        projectLinks: [
+          {
+            name: 'github',
+            link: 'https://github.com/khanguslee/meta',
+          },
+        ],
+        description:
+          'Web application that puts online news meta-data back in the hands of the user. I helped create a working authentication and registration system using passport.js, mongoose and MongoDB.',
+      },
+      {
+        name: 'Hard Hackathon 2018',
+        project: 'Guarden',
+        projectLinks: [
+          {
+            name: 'github',
+            link: 'https://github.com/khanguslee/Guarden',
+          },
+          { name: 'webpage', link: 'http://guarden.herokuapp.com/' },
+        ],
+        description:
+          'An all-in-one plant management system. Created a dashboard that would grab sensor data from MongoDB which were sent from Arduinos and Raspberry Pis. The dashboard could also control a servo that would spray plants.',
+      },
+    ],
+  },
 };

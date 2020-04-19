@@ -1,40 +1,72 @@
 import React from 'react';
 
-function Extracurriculars() {
-  const renderStudentClubs = () => {
+function Extracurriculars(props) {
+  const { studentClubs, hackathons } = props;
+
+  const renderStudentClubs = clubs => {
+    if (!clubs || !clubs.length) return <> </>;
+
+    const clubList = clubs.map((club, index) => {
+      return (
+        <div key={club + index}>
+          <div className="d-flex justify-content-between">
+            <h4 className="mb-0">{club.name}</h4>
+            <div className="text-right">
+              <span className="text-primary">
+                {club.date.start + ' - ' + club.date.end}
+              </span>
+            </div>
+          </div>
+          <p>{club.title}</p>
+        </div>
+      );
+    });
+
     return (
       <>
         <h3>Student Clubs</h3>
-        <ul className="fa-ul mb-0">
-          <li>Monash Human Power (MHP) 2018-2020 - Electrical Team Lead</li>
-          <li>
-            Monash Association of Coding (MAC) 2019/20 - Technology Director
-          </li>
-          <li>
-            Society of Monash Electrical Engineers (SMEE) 2019 - Careers and
-            Sponsorship Representative
-          </li>
-          <li>
-            Society of Monash Electrical Engineers (SMEE) 2018 - 3<sup>rd</sup>{' '}
-            Year Representative
-          </li>
-        </ul>
+        {clubList}
       </>
     );
   };
 
-  const renderHackathons = () => {
+  const renderHackathons = hackathons => {
+    if (!hackathons || !hackathons.length) return <> </>;
+
+    const hackathonList = hackathons.map((hackathon, index) => {
+      const { name, project, projectLinks, description } = hackathon;
+
+      const hackathonTitle = `${name} - ${project}`;
+
+      // Create links to project
+      let hackathonProjectLinks;
+      if (projectLinks) {
+        hackathonProjectLinks = projectLinks.map((projectLink, index) => {
+          return (
+            <a
+              href={projectLink.link}
+              className="mr-3"
+              key={projectLink.link + index}
+            >
+              <i>{projectLink.name}</i>
+            </a>
+          );
+        });
+      }
+
+      return (
+        <div key={hackathonTitle + index}>
+          <h4 className="mb-0">{hackathonTitle}</h4>
+          {!!projectLinks && <div>{hackathonProjectLinks}</div>}
+          <p>{description}</p>
+        </div>
+      );
+    });
+
     return (
       <>
         <h3>Hackathons</h3>
-        <ul className="fa-ul mb-0">
-          <li>
-            <i className="fa-li fa fa-trophy text-warning"></i>2<sup>nd</sup>
-            Place - Hackamon 2019 - perspective
-          </li>
-          <li>Unihack 2019 - meta</li>
-          <li>Hard Hackathon 2018 - Guarden</li>
-        </ul>
+        {hackathonList}
       </>
     );
   };
@@ -47,9 +79,9 @@ function Extracurriculars() {
     >
       <div className="w-100">
         <h2 className="mb-5">Extracurriculars</h2>
-        {renderStudentClubs()}
+        {renderStudentClubs(studentClubs)}
         <br></br>
-        {renderHackathons()}
+        {renderHackathons(hackathons)}
       </div>
     </section>
   );
