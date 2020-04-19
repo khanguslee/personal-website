@@ -4,9 +4,11 @@ function Extracurriculars(props) {
   const { studentClubs, hackathons } = props;
 
   const renderStudentClubs = clubs => {
-    const clubList = clubs.map(club => {
+    if (!clubs || !clubs.length) return <> </>;
+
+    const clubList = clubs.map((club, index) => {
       return (
-        <div>
+        <div key={club + index}>
           <div className="d-flex justify-content-between">
             <h4 className="mb-0">{club.name}</h4>
             <div className="text-right">
@@ -29,22 +31,31 @@ function Extracurriculars(props) {
   };
 
   const renderHackathons = hackathons => {
-    const hackathonList = hackathons.map(hackathon => {
+    if (!hackathons || !hackathons.length) return <> </>;
+
+    const hackathonList = hackathons.map((hackathon, index) => {
       const { name, project, projectLinks, description } = hackathon;
 
       const hackathonTitle = `${name} - ${project}`;
 
       // Create links to project
-      const hackathonProjectLinks = projectLinks.map(projectLink => {
-        return (
-          <a href={projectLink.link} className="mr-3">
-            <i>{projectLink.name}</i>
-          </a>
-        );
-      });
+      let hackathonProjectLinks;
+      if (projectLinks) {
+        hackathonProjectLinks = projectLinks.map((projectLink, index) => {
+          return (
+            <a
+              href={projectLink.link}
+              className="mr-3"
+              key={projectLink.link + index}
+            >
+              <i>{projectLink.name}</i>
+            </a>
+          );
+        });
+      }
 
       return (
-        <div>
+        <div key={hackathonTitle + index}>
           <h4 className="mb-0">{hackathonTitle}</h4>
           {!!projectLinks && <div>{hackathonProjectLinks}</div>}
           <p>{description}</p>
