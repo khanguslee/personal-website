@@ -133,16 +133,25 @@ module.exports = {
       {
         name: 'Hackamon 2019',
         project: 'perspective',
+        projectLinks: {
+          github: 'https://github.com/khanguslee/perspective',
+        },
         description: '2nd Place',
       },
       {
         name: 'Unihack 2019',
         project: 'meta',
+        projectLinks: {
+          github: 'https://github.com/khanguslee/meta',
+        },
         description: '',
       },
       {
         name: 'Hard Hackathon 2018',
         project: 'Guarden',
+        projectLinks: {
+          github: 'https://github.com/khanguslee/Guarden',
+        },
         description: '',
       },
     ],
