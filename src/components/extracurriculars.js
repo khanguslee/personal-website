@@ -30,13 +30,28 @@ function Extracurriculars(props) {
 
   const renderHackathons = hackathons => {
     const hackathonList = hackathons.map(hackathon => {
+      const { name, project, projectLinks, description } = hackathon;
+
+      const hackathonTitle = `${name} - ${project}`;
+
+      // Create links to project
+      const hackathonProjectLinks = projectLinks.map(projectLink => {
+        return (
+          <a href={projectLink.link} className="mr-3">
+            <i>{projectLink.name}</i>
+          </a>
+        );
+      });
+
       return (
         <div>
-          <h4 className="mb-0">{hackathon.name}</h4>
-          <p>{hackathon.project}</p>
+          <h4 className="mb-0">{hackathonTitle}</h4>
+          {!!projectLinks && <div>{hackathonProjectLinks}</div>}
+          <p>{description}</p>
         </div>
       );
     });
+
     return (
       <>
         <h3>Hackathons</h3>
