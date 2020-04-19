@@ -30,7 +30,10 @@ const IndexPage = () => (
 
       <hr className="m-0" />
 
-      <Extracurriculars studentClubs={config.extracurriculars.studentClubs} />
+      <Extracurriculars
+        studentClubs={config.extracurriculars.studentClubs}
+        hackathons={config.extracurriculars.hackathons}
+      />
 
       <hr className="m-0" />
 

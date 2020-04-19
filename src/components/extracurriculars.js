@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Extracurriculars(props) {
-  const { studentClubs } = props;
+  const { studentClubs, hackathons } = props;
 
   const renderStudentClubs = clubs => {
     const clubList = clubs.map(club => {
@@ -19,6 +19,7 @@ function Extracurriculars(props) {
         </div>
       );
     });
+
     return (
       <>
         <h3>Student Clubs</h3>
@@ -27,18 +28,19 @@ function Extracurriculars(props) {
     );
   };
 
-  const renderHackathons = () => {
+  const renderHackathons = hackathons => {
+    const hackathonList = hackathons.map(hackathon => {
+      return (
+        <div>
+          <h4 className="mb-0">{hackathon.name}</h4>
+          <p>{hackathon.project}</p>
+        </div>
+      );
+    });
     return (
       <>
         <h3>Hackathons</h3>
-        <ul className="fa-ul mb-0">
-          <li>
-            <i className="fa-li fa fa-trophy text-warning"></i>2<sup>nd</sup>
-            Place - Hackamon 2019 - perspective
-          </li>
-          <li>Unihack 2019 - meta</li>
-          <li>Hard Hackathon 2018 - Guarden</li>
-        </ul>
+        {hackathonList}
       </>
     );
   };
@@ -53,7 +55,7 @@ function Extracurriculars(props) {
         <h2 className="mb-5">Extracurriculars</h2>
         {renderStudentClubs(studentClubs)}
         <br></br>
-        {renderHackathons()}
+        {renderHackathons(hackathons)}
       </div>
     </section>
   );
