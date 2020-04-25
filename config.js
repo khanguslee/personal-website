@@ -33,10 +33,10 @@ module.exports = {
       company: 'MongoDB',
       role: 'Software Engineer Intern',
       startDate: 'December 2019',
-      endDate: 'February 2019',
+      endDate: 'February 2020',
       description: 'Part of the MongoDB Charts Team.',
       tasks: [
-        'Fix various bugs on their React application that will released into production',
+        'Fix various bugs on their React application that will be released into production',
         'Work with another intern to create interactive chart features',
       ],
       imageName: 'mongodb-logo',
@@ -62,7 +62,7 @@ module.exports = {
       description: 'Part of the Technical Services Team.',
       tasks: [
         'Convert desktop application into a web application',
-        'Render various elements of web application using d3.js library',
+        'Render various elements of the web application using d3.js library',
         'Incorporate collaborative features into the web application',
       ],
       imageName: 'mongodb-logo',
