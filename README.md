@@ -5,6 +5,9 @@
 
 My own portfolio website created with Gatsby and hosted with Netlify.
 
+This code was created using the [gatsby-starter-resume
+](https://github.com/anubhavsrivastava/gatsby-starter-resume) template and refactored to receive information from a single file.
+
 ## Getting started
 
 ### Development
@@ -15,6 +18,12 @@ My own portfolio website created with Gatsby and hosted with Netlify.
 ```
 
 A local deployment should be hosted on <http://localhost:8000/>
+
+#### Editing Information
+
+To edit information on the website, simply edit the [`config.js`](config.js) file with your details.
+
+To add svg images for company logos, please insert it into `src/assets/svg/logos`.
 
 ### Production Build
 
