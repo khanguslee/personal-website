@@ -23,9 +23,27 @@ A local deployment should be hosted on <http://localhost:8000/>
   gatsby serve
 ```
 
+### Hosting
+
+You will need to go to a domain registrar to purchase your own domain name. [Namecheap](https://nc.me/) provides a free `.me` domain for university students for 1 year.
+
+This repository is currently hosted on Netlify on their starter plan (**free**).
+
+#### Steps on Hosting on Netlify
+
+1. Create a Netlify account
+2. Click `New site from Git`
+3. Select `Github`
+4. Select the repository you would like to host
+5. Go to `Settings` -> `Build & deploy` -> `Edit settings`
+6. Change Build command to `gatsby build`
+7. Change Publish directory to `public/`
+
+Your repository should now be automatically deployed on every push to `master`!
+
 ### Deploying
 
-This repository has been set up to automatically deploy any changes to the `master` branch.
+As discussed above, this repository has been set up to automatically deploy any changes to the `master` branch. `master` branch has been locked so it requires pull requests to be changed.
 
 ## Credits
 
