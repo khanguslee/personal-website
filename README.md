@@ -1,6 +1,7 @@
 # Portfolio Website
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f5741431-5c65-4e57-99a1-3be1024d3185/deploy-status)](https://app.netlify.com/sites/suspicious-northcutt-65b2d6/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 My own portfolio website created with Gatsby and hosted with Netlify.
 
